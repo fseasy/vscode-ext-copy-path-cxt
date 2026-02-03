@@ -4,8 +4,12 @@
 
 > Quickly copy file names or paths relative to the currently active file in VS Code.
 
-
-![Screenshot](./screenshot.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/fseasy/vscode-ext-copy-path-cxt/main/screenshot.png"
+  width=300
+  alt="Copy relative path preview"
+/>
+</p>
 
 ---
 

@@ -28,3 +28,4 @@ pnpm-debug.log*
 
 # Docs not required
 CHANGELOG.md
+*.png
