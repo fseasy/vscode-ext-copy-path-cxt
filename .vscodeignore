@@ -1,0 +1,30 @@
+# Source
+src/**
+*.ts
+tsconfig.json
+
+# Dependencies
+node_modules/**
+pnpm-lock.yaml
+**/pnpm-lock.yaml
+
+# Tooling / config
+eslint.config.mjs
+.prettierrc*
+.editorconfig
+.vscode/**
+.gitignore
+.git/**
+
+# Tests
+test/**
+**/*.test.*
+**/*.spec.*
+
+# Logs / maps
+*.map
+npm-debug.log*
+pnpm-debug.log*
+
+# Docs not required
+CHANGELOG.md

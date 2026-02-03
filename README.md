@@ -41,5 +41,6 @@ You can assign your own shortcuts in `keybindings.json`, for example:
   "command": "copyRelative.copyFileName",
   "when": "explorerViewletVisible"
 }
+```
 
 But I recommend you to directly use the context menu to avoid open/preview the target file.

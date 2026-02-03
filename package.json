@@ -7,12 +7,19 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other"],
-  "keywords": ["copy", "file name", "relative path", "file"],
-  "activationEvents": [
-    "onCommand:copyRelative.copyFileName",
-    "onCommand:copyRelative.copyRelativeToActive"
+  "categories": [
+    "Other"
   ],
+  "keywords": [
+    "copy",
+    "file name",
+    "relative path",
+    "file"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fseasy/vscode-ext-copy-path-cxt"
+  },
   "main": "./out/extension.js",
   "l10n": "./l10n",
   "contributes": {
@@ -40,7 +47,10 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
+    "vscode:prepublish": "pnpm run bundle",
+    "bundle": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node --minify",
+    "package": "pnpm vsce package --no-dependencies",
+    "publish": "pnpm vsce publish --no-dependencies",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint"
@@ -50,6 +60,8 @@
     "@stylistic/eslint-plugin": "^5.7.1",
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.7.1",
+    "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.54.0"
