@@ -1,0 +1,60 @@
+{
+  "name": "copy-file-relative-path-cxt",
+  "displayName": "Copy File Path Ext: Name, Relative Path to Active Editor",
+  "description": "Copy file name or path relative to the currently active editor from Context Menu",
+  "version": "1.0.0",
+  "publisher": "fseasy",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["copy", "file name", "relative path", "file"],
+  "activationEvents": [
+    "onCommand:copyRelative.copyFileName",
+    "onCommand:copyRelative.copyRelativeToActive"
+  ],
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copyRelative.copyFileName",
+        "title": "%copyRelative.copyFileName%"
+      },
+      {
+        "command": "copyRelative.copyRelativeToActive",
+        "title": "%copyRelative.copyRelativeToActive%"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "copyRelative.copyFileName",
+          "group": "6_copypath@0"
+        },
+        {
+          "command": "copyRelative.copyRelativeToActive",
+          "group": "6_copypath@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@stylistic/eslint-plugin": "^5.7.1",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "eslint": "^9.39.2",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.54.0"
+  },
+  "dependencies": {
+    "@vscode/l10n": "^0.0.18"
+  }
+}
