@@ -1,5 +1,7 @@
 # Copy File Relative Path
 
+*Credits to ChatGPT.*
+
 > Quickly copy file names or paths relative to the currently active file in VS Code.
 
 
